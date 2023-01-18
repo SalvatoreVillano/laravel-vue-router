@@ -6,7 +6,6 @@
         <div v-if="post.category">
             <h5>Category: {{ post.category.name }}</h5>
         </div>
-
     </section>
     <section v-else>Loading...</section>
 </template>
@@ -26,15 +25,15 @@ export default {
         getPost() {
             console.log(this.$route);
             axios.get(`${this.store.apiBaseUrl}/projects/${this.$route.params.slug}`).then((response) => {
-                console.log(response.data.results);
+                console.log(response.data.result);
                 if (response.data.success) {
-                    console.log(response.data.results);
-                    this.post = response.data.results;
+                    console.log(response.data.result);
+                    this.post = response.data.result;
                 } else {
                     console.log(this.$router);
                     this.$router.push({ name: 'not-found' });
-                }
 
+                }
             });
         }
     },
