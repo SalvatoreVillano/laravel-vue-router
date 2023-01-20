@@ -1,8 +1,9 @@
 <template>
-    <div class="row">
-        <div class="col-12">
-            <h1 class="mt-5 mb-3">Contatti</h1>
-            <ContactForm />
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+                <ContactForm />
+            </div>
         </div>
     </div>
 </template>
