@@ -1,13 +1,16 @@
 <template>
-    <section v-if="post">
-        <h1>{{ post.title }}</h1>
-        <img :src="`${store.imageBasePath}${post.cover_image}`" class="card-img-top" :alt="post.title">
-        <p>{{ post.content }}</p>
-        <div v-if="post.category">
-            <h5>Category: {{ post.category.name }}</h5>
-        </div>
-    </section>
-    <section v-else>Loading...</section>
+    <div class="d-flex justify-content-center" style="width: 18rem;">
+
+        <section v-if="post">
+            <h1>{{ post.title }}</h1>
+            <img :src="`${store.imageBasePath}${post.cover_image}`" class="card-img-top" :alt="post.title">
+            <p>{{ post.content }}</p>
+            <div v-if="post.category">
+                <h5>Category: {{ post.category.name }}</h5>
+            </div>
+        </section>
+        <section v-else>Loading...</section>
+    </div>
 </template>
 
 <script>

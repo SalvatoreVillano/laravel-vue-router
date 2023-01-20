@@ -1,7 +1,4 @@
-// COLORS
-$bg-color: rgb(175, 175, 175);
-$text-color: #333;
- 
+
 @use './partials/variables' as *;
 
 $fa-font-path: '../webfonts';
@@ -10,7 +7,10 @@ $fa-font-path: '../webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
-body{
-    background-color: $bg-color;
-}
 
+.my-card {
+    background-color: transparent !important;
+    box-shadow: rgb(255, 255, 255) 0px 10px 20px -10px;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}

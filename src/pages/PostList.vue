@@ -1,7 +1,12 @@
 <template>
-    <div class="row">
-        <div class="col-12 col-md-4" v-for=" (post, index) in posts " :key="index">
-            <PostCard :post="post" />
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-3 col-lg-3" v-for=" (post, index) in posts " :key="index">
+                <PostCard :post="post" />
+
+            </div>
+
         </div>
     </div>
 
